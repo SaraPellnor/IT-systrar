@@ -4,11 +4,16 @@ import iconLogo from "../../assets/logos/logo-icons.png";
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 
-const listItems = ["Tjanster", "om oss", "kontakt", "projekt"];
+const listItems = [
+  { title: "Tjänster", slug: "tjanster" },
+  { title: "om oss", slug: "om-oss" },
+  { title: "kontakt", slug: "kontakt" },
+  { title: "projekt", slug: "projekt" },
+];
 
 const Header = ({ headerImage }: { headerImage: StaticImageData }) => {
   return (
-    <div className="h-[50vh] w-screen relative">
+    <div className="h-screen md:h-[50vh] w-screen relative">
       <MobileHeader
         txtLogo={txtLogo}
         iconLogo={iconLogo}

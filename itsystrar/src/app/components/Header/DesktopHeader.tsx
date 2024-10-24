@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import { iHeader } from "./interfaces";
 
 const DesktopHeader = ({
   iconLogo,
@@ -7,7 +8,7 @@ const DesktopHeader = ({
 }: {
   iconLogo: StaticImageData;
   txtLogo: StaticImageData;
-  listItems: string[];
+  listItems: iHeader[];
 }) => {
   return (
     <div className="absolute z-20 bg-gradient-to-b from-zinc-900/50 to-slate-200/0 p-8 px-10 w-screen justify-between items-center hidden md:flex">
@@ -26,7 +27,7 @@ const DesktopHeader = ({
               key={index}
               className="hover:text-orange-400 hover:cursor-pointer"
             >
-              {item}
+              <a href={`/${item.slug}`}>{item.title}</a>
             </li>
           ))}
         </ul>
