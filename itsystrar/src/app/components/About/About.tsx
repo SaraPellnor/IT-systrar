@@ -1,16 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import aboutImage from "./img/20240518_112819.jpg";
+import aboutImage from "./img/aboutImage.jpg";
 import { IoIosFlower } from "react-icons/io";
 
 const About = () => {
   return (
-    <div className=" md:p-20 text-black w-full h-[100vh]  flex flex-col justify-center md:flex-row bg-white items-center">
+    <div className=" relative md:p-20  w-full h-[100vh]  flex flex-col justify-center md:flex-row items-center">
       <h1 className="absolute top-12 right-[25%] font-bold z-10 text-6xl">ABOUT US</h1>
-      <div className=" md:w-1/2 w-4/5 flex justify-center items-center ">
-        <IoIosFlower className="absolute md:bottom-16 bottom- left-[4%] text-7xl" />
+      <div className=" relative md:w-1/2 w-4/5 flex justify-center items-center ">
+        <IoIosFlower className="absolute md:bottom-16 -left-12 text-7xl" />
         <Image
-          className=""
+          className="rounded-xl md:min-w-[500px] md:max-w-[600px]"
           src={aboutImage}
           alt="aboute image"
         />
@@ -28,7 +28,7 @@ const About = () => {
           impedit sequi ducimus. Numquam ut perspiciatis ea ab illo asperiores
           magni, architecto minus!
         </p>
-        <div className=" absolute bottom-0 right-16 w-16 border-b-8 border-black"></div>
+        <div className=" absolute bottom-0 right-16 w-16 border-b-8 "></div>
       </div>
     </div>
   );
