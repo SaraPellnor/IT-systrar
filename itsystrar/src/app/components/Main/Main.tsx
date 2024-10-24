@@ -1,8 +1,10 @@
-import React from 'react'
+
+import About from "../About/About"
 
 const Main = () => {
   return (
-    <div>Main</div>
+    <div><About /></div>
+
   )
 }
 
